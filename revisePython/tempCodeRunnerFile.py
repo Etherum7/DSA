@@ -1,0 +1,2 @@
+
+# print(sys.getsizeof(mylist))

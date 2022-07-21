@@ -1,0 +1,1 @@
+3 if isDirected else 6
