@@ -2,6 +2,33 @@
 
 # A Function to find the string having the minimum
 # length and returns that length
+
+class Solution:
+    def minLen(self, strs):
+        res=float('inf')
+        for str in strs:
+            res=min(res, len(str))
+        return res
+    def isValid(self,strs, l):
+        temp=strs[0][:l+1]
+        for s in strs[1:]:
+            if not s.startswith(temp):
+                return False
+            
+        return True
+        
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        if (not strs or len(strs)==0): return ''
+        minLen=self.minLen(strs)
+        low=0
+        high=minLen
+        while low<=high:
+            mid=(low+high)//2
+            if self.isValid(strs, mid):
+                low=mid+1
+            else:
+                high=mid-1
+        return strs[0][:low]
 def findMinLength(arr, n):
 
     min = len(arr[0])

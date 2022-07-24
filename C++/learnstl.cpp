@@ -108,6 +108,7 @@ void explainDeque()
     // similar fn
     dq.back();
     dq.front();
+    
 }
 void explainStack()
 {
@@ -159,7 +160,7 @@ void explainPQ()
 
     // Minimum heap
     priority_queue<int, vector<int>, greater<int>> pq;
-
+priority_queue<int, vector<int>, greater<vector<int>>> pq;
     pq.push(1);
     pq.push(6);
     cout << pq.top();
@@ -173,6 +174,7 @@ void explainSet()
     st.insert(2);
     st.emplace(3);
     st.insert(3);
+    
     // {1,2,3,4}
     // Not linear
     // returns an iterator that points to 3
@@ -189,6 +191,8 @@ void explainSet()
 
     auto it = st.lower_bound(2);
     auto it = st.upper_bound(3);
+    cout<<"here";
+    cout<<*(it);
     // log time
     // as bst
 }
@@ -229,6 +233,7 @@ void explainMap()
     mpp[1] = 2;
     mpp.emplace(1, 2);
     mpp.insert(2, 3);
+    
 
     mpp3[{2, 3}] = 10;
     for (auto it : mpp)

@@ -1,4 +1,24 @@
 class Solution:
+    def minChar(self,str):
+        #Write your code here
+        left=0
+        n=len(str)
+        right=n-1
+        added=0
+        while left<right:
+            if(str[left]==str[right]):
+                left+=1
+                right-=1
+            else:
+                added=n-right
+                left=0
+                while str[left]==str[right]:
+                    left+=1
+                    added-=1
+                right-=1
+        return added
+        
+class Solution:
     def minChar(self, str):
         # Write your code here
 

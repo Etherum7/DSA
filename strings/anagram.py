@@ -15,7 +15,7 @@ class Solution:
                 d[c] += 1
             else:
                 d[c] = 1
-            cnt = len(d)
+        cnt = len(d)
         for c in b:
             if c not in d:
                 return False
